@@ -1,5 +1,5 @@
 function CountDown(date) {
-	this.diff = function() {return new Date(new Date(date - Date.now()))};
+	this.diff = function() {return new Date(date - Date.now())};
 	this.years = function() {return this.diff().getUTCFullYear() - 1970;}
 	this.months = function() {return this.diff().getUTCMonth();}
 	this.days = function() {return this.diff().getUTCDate() - 1;}
