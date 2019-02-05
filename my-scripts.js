@@ -13,11 +13,13 @@ times = ["years", "months", "days", "hours", "minutes", "seconds"];
 message = document.getElementById("message");
 
 function update() {
-	date = new CountDown(new Date(Date.parse("07/01/2019")));
+	date = new CountDown(new Date("July 01 2019 00:00:00 GMT-0700 (Pacific Daylight Time)"));
 
 	message.innerHTML = "";
 	for (let i=0; i < times.length; i++) {
-		message.innerHTML += "<p>" + times[i] + ": " + date[times[i]]() + "</p>";
+		if (date[times[i]]() > 0 || times[i] == "seconds") {
+			message.innerHTML += "<p>" + times[i] + ": " + date[times[i]]() + "</p>";
+		}
 	}
 }
 
