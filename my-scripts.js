@@ -13,7 +13,7 @@ times = ["years", "months", "days", "hours", "minutes", "seconds"];
 message = document.getElementById("message");
 
 function update() {
-	date = new CountDown(new Date("July 01 2019 00:00:00 GMT-0700 (Pacific Daylight Time)"));
+	date = new CountDown(new Date("July 01 2020 00:00:00 GMT-0700 (Pacific Daylight Time)"));
 
 	message.innerHTML = "";
 	for (let i=0; i < times.length; i++) {
